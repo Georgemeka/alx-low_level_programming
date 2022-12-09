@@ -1,2 +1,1 @@
-# alx-low_level_programming
-Coding in C Programming Language
+Creating our first hello world on C programming Language
