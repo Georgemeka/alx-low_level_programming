@@ -8,16 +8,18 @@
 
 int main(void)
 {
-	int nums;
-	int nums1;
+	int i;
+	unsigned char a = '0';
 
-	for (nums = '0'; nums <= '9'; nums++)
+	for (i = 0; i < 10; i++)
 	{
-		putchar(nums);
+		putchar(i);
+		a++;
 	}
-	for (nums1 = 'A'; nums <= 'F'; nums1++)
+	for (i = 0; i < 6; i++)
 	{
-		putchar(nums1);
+		putchar('0' + a);
+		a++;
 	}
 	putchar('\n');
 	return (0);
