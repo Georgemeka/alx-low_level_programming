@@ -1,17 +1,13 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - tests for positive or negative number
- *
+ * main - tests for positive or negative number *
  * Return: Always 0.
- *
  */
 
 int main(void)
 {
 	int i;
-
 
 	i = 0;
 	positive_or_negative(i);
