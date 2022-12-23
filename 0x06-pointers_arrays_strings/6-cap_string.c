@@ -8,25 +8,27 @@
 
 char *cap_string(char *a)
 {
-	int i, x;
-	char *separators = ",;.!?\"(){} \n\t";
+	int i, j;
+	char c[] = {44, 59, 46, 33, 63, 34, 40, 41, 123, 125, 32, 10, 9};
 
-	for (i = 0; *(a + i) != '\0'; i++)
+	i = 0;
+
+	while (a[i] != '\0')
 	{
-		if (*(a + i) >= 'a' && *(a + i) <= 'z')
-			for (x = 0; *(separators + x) != '\0'; x++)
+		if (i == 0 && a[i] >= 97 && a[i] <= 122)
+		{
+			a[i] = a[i] - 32;
+		}
+		j = 0;
+		while (c[j] != '\0')
+		{
+			if (c[j] == a[i] && (a[i + 1] >= 97 && a[i + 1] <=122))
 			{
-				if ((*a + i - 1) == *(separators + x))
-				{
-					*(a + i) -= 32;
-					break;
-				}
-				else if (i == 0)
-				{
-					*(a + i) -= 32;
-					break;
-				}
+				a[i + 1] = a[i + 1] - 32;
 			}
+			j++;
+		}
+		i++;
 	}
 	return (a);
 }
