@@ -22,7 +22,7 @@ char *cap_string(char *a)
 		j = 0;
 		while (c[j] != '\0')
 		{
-			if (c[j] == a[i] && (a[i + 1] >= 97 && a[i + 1] <=122))
+			if (c[j] == a[i] && (a[i + 1] >= 97 && a[i + 1] <= 122))
 			{
 				a[i + 1] = a[i + 1] - 32;
 			}
