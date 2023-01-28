@@ -3,7 +3,7 @@
 void print_words(void) __attribute__((constructor));
 
 /**
- * print_words - prints words before main is executed
+ * print_words - prints words function before main is executed
  */
 
 void print_words(void)
